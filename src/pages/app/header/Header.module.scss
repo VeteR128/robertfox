@@ -1,0 +1,103 @@
+.header {
+  background-image: url(bg.webp);
+  background-position: center center;
+  background-size: cover;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-right: calc(150% / (1440 / 100));
+    padding-left: calc(150% / (1440 / 100));
+    padding-bottom: 24px;
+    align-items: center;
+  }
+  .navbar {
+  }
+  .link {
+    font-size: 12px;
+    line-height: 116%;
+    text-decoration: none;
+    margin-right: 54px;
+    text-transform: uppercase;
+    color: #a9a9aa;
+    font-weight: 600;
+  }
+  .link:last-child {
+    margin-right: 0;
+  }
+  .button {
+    border: 1px solid #fe390c;
+    color: #fe390c;
+    background: none;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .info {
+    padding-right: calc(150% / (1440 / 100));
+    padding-left: calc(150% / (1440 / 100));
+    margin-top: calc(220% / (1440 / 100));
+    padding-bottom: calc(225% / (1440 / 100));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .name {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 124%;
+    margin: 0;
+  }
+  .span {
+    color: #fe390c;
+  }
+  .subtitle {
+    font-size: 130px;
+    line-height: 115%;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+  .paragraph {
+    font-size: 16px;
+    line-height: 187%;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .info_button {
+    background-color: #fe390c;
+    border: none;
+    outline: none;
+    max-width: 106px;
+    width: 100%;
+    padding: 14.3px 0;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__link {
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .contact__link:last-child {
+    margin-bottom: 0;
+  }
+}

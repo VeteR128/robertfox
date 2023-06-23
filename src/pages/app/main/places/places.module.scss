@@ -1,0 +1,13 @@
+.places {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: calc(254% / (1440 / 100));
+  padding-right: calc(254% / (1440 / 100));
+  padding-top: calc(90% / (1440 / 100));
+  padding-bottom: calc(192% / (1440 / 100));
+  justify-content: space-between;
+  background: #f7f7f7;
+  z-index: 3;
+}
