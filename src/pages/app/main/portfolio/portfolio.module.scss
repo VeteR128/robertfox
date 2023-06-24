@@ -1,0 +1,91 @@
+.portfolio {
+  position: relative;
+  background: #f7f7f7;
+  .swiper {
+    padding-bottom: 116px;
+    margin-left: calc(150% / (1440 / 100));
+    margin-right: calc(150% / (1440 / 100));
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 72px;
+    margin-left: calc(150% / (1440 / 100));
+    margin-right: calc(150% / (1440 / 100));
+    margin-bottom: 62px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      color: #111214;
+      font-size: 40px;
+      font-family: "Anton";
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin: 0;
+      .span {
+        color: #fe390c;
+        font-size: 80px;
+        font-family: "Anton";
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        margin-right: 24px;
+      }
+    }
+    .button {
+      background-color: #fe390c;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 10px 5px;
+      transition: all 0.6s ease-in-out;
+    }
+    .button:first-child {
+      margin-right: 34px;
+    }
+    .button:hover {
+      transition: all 0.6s ease-in-out;
+      opacity: 0.7;
+    }
+  }
+
+  .img {
+    width: 100%;
+  }
+  .text {
+    position: absolute;
+    display: none;
+    top: calc(50% / (249 / 100));
+    left: 27%;
+    color: #fff;
+    font-size: 32px;
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+  }
+  .card__text {
+    position: absolute;
+    display: none;
+    top: calc(100% / (249 / 100));
+    left: 27%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.64px;
+  }
+
+  .slide {
+    position: relative;
+  }
+  .slide:hover {
+    .text {
+      display: block;
+    }
+    .card__text {
+      display: block;
+    }
+  }
+}
