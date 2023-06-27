@@ -12,8 +12,7 @@
     padding-bottom: 24px;
     align-items: center;
   }
-  .navbar {
-  }
+
   .link {
     font-size: 12px;
     line-height: 116%;
@@ -22,6 +21,9 @@
     text-transform: uppercase;
     color: #a9a9aa;
     font-weight: 600;
+    @media screen and (max-width: 800px) {
+      margin-right: 20px;
+    }
   }
   .link:last-child {
     margin-right: 0;
@@ -49,7 +51,7 @@
     flex-direction: column;
   }
   .title {
-    font-size: 24px;
+    font-size: calc(16px + 8 * (100vw / 1440));
     line-height: 124%;
     margin: 0;
   }
@@ -57,7 +59,7 @@
     color: #fe390c;
   }
   .subtitle {
-    font-size: 130px;
+    font-size: calc(20px + 110 * (100vw / 1440));
     line-height: 115%;
     margin: 0;
     letter-spacing: 2px;
@@ -65,7 +67,7 @@
     text-transform: uppercase;
   }
   .paragraph {
-    font-size: 16px;
+    font-size: calc(8px + 8 * (100vw / 1440));
     line-height: 187%;
     margin: 0;
     margin-bottom: 24px;

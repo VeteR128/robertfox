@@ -10,4 +10,20 @@
   justify-content: space-between;
   background: #f7f7f7;
   z-index: 3;
+  @media screen and (max-width: 1200px) {
+    padding-left: calc(150% / (1440 / 100));
+    padding-right: calc(150% / (1440 / 100));
+  }
+
+  .image {
+    margin-right: calc(98% / (1440 / 100));
+    width: 14%;
+    @media screen and (max-width: 575px) {
+      width: 16%;
+      margin: 0;
+    }
+  }
+  .image:last-child {
+    margin-right: 0;
+  }
 }

@@ -7,6 +7,10 @@
   padding-bottom: calc(83% / (1440 / 100));
   background: rgb(233, 213, 213);
   justify-content: space-between;
+  @media screen and (max-width: 925px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .cards {
     display: flex;
     flex-direction: row;
@@ -20,6 +24,7 @@
       .img {
         max-width: 230px;
         object-fit: cover;
+        width: 100%;
       }
       .card__container {
         display: flex;
@@ -73,14 +78,14 @@
       .count {
         color: #fe390c;
         margin: 0;
-        font-size: 80px;
+        font-size: calc(40px + 40 * (100vw / 1440));
         font-family: "Anton", Arial, Helvetica, sans-serif;
         letter-spacing: 1.6px;
         text-transform: uppercase;
       }
       .info__title {
         color: #111214;
-        font-size: 40px;
+        font-size: calc(20px + 20 * (100vw / 1440));
         font-family: "Anton", Arial, Helvetica, sans-serif;
         letter-spacing: 0.8px;
         text-transform: uppercase;
@@ -91,13 +96,14 @@
     .list {
       list-style: none;
       padding-left: 92px;
+      margin: 0;
       .ul {
         max-width: 429px;
         width: 100%;
         color: #a9a9aa;
-        font-size: 14px;
+        font-size: calc(6px + 8 * (100vw / 1440));
         font-weight: 500;
-        line-height: 32px;
+        line-height: 228%;
         letter-spacing: -0.28px;
       }
       .ul:first-child {

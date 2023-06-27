@@ -39,8 +39,12 @@ export const Portfolio = () => {
         className={styles.swiper}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={25}
-        slidesPerView={3}
         pagination={{ clickable: true }}
+        breakpoints={{
+          768: { slidesPerView: 3 },
+          480: { slidesPerView: 2 },
+          320: { slidesPerView: 1 },
+        }}
         ref={slideRef}
       >
         {list.map((item) => (

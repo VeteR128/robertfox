@@ -3,16 +3,6 @@ import styles from "./service.module.scss";
 export const Service = () => {
   return (
     <section className={styles.service}>
-      <div className={styles.work}>
-        <h3 className={styles.title}>
-          let’s work together on Your Next Project
-        </h3>
-        <button className={styles.button}>HIRE ME NOW</button>
-        <a className={styles.link} href="#">
-          <img src="down.svg" alt="down" />
-          <p className={styles.text}>Download CV</p>
-        </a>
-      </div>
       <div className={styles.spaces}>
         <h2 className={styles.spaces__title}>
           <span className={styles.span}>02</span>my service

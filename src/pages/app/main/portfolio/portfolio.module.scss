@@ -2,7 +2,7 @@
   position: relative;
   background: #f7f7f7;
   .swiper {
-    padding-bottom: 116px;
+    padding-bottom: calc(116% / (1440 / 100));
     margin-left: calc(150% / (1440 / 100));
     margin-right: calc(150% / (1440 / 100));
   }
@@ -12,23 +12,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 72px;
+    padding-top: calc(72% / (1440 / 100));
     margin-left: calc(150% / (1440 / 100));
     margin-right: calc(150% / (1440 / 100));
-    margin-bottom: 62px;
+    margin-bottom: calc(62% / (1440 / 100));
 
     .title {
       display: flex;
       align-items: center;
       color: #111214;
-      font-size: 40px;
+      font-size: calc(20px + 20 * (100vw / 1440));
       font-family: "Anton";
       letter-spacing: 0.8px;
       text-transform: uppercase;
       margin: 0;
       .span {
         color: #fe390c;
-        font-size: 80px;
+        font-size: calc(40px + 40 * (100vw / 1440));
         font-family: "Anton";
         letter-spacing: 1.6px;
         text-transform: uppercase;

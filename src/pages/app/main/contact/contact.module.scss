@@ -1,0 +1,178 @@
+.contact {
+  background: #111214;
+  padding-top: 55px;
+  padding-left: calc(150% / (1440 / 100));
+  padding-right: calc(150% / (1440 / 100));
+  padding-bottom: 51px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (max-width: 910px) {
+    flex-direction: column;
+  }
+  .info {
+    margin-right: 25px;
+    @media screen and (max-width: 910px) {
+      margin-right: 0;
+    }
+  }
+  .info__title {
+    color: #fff;
+    font-size: calc(20px + 20 * (100vw / 1440));
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 25px;
+    .span {
+      margin-right: 24px;
+      color: #fe390c;
+      font-size: calc(40px + 40 * (100vw / 1440));
+      font-family: "Anton", Arial, Helvetica, sans-serif;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin-top: 55px;
+    margin-bottom: 66px;
+    .card {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 42px;
+      .img {
+        margin-right: 17px;
+      }
+      .card__title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+        margin: 0;
+      }
+      .card__subtitle {
+        margin: 0;
+        margin-top: 8px;
+        color: #a9a9aa;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.28px;
+      }
+    }
+    .card:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    .link {
+      width: 42px;
+      height: 42px;
+      border-radius: 42px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 28px;
+    }
+    .link:last-child {
+      margin-right: 0;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    .container__title {
+      text-align: center;
+      color: #fff;
+      font-size: calc(12px + 12 * (100vw / 1440));
+      margin: 0;
+      font-family: "Anton", Arial, Helvetica, sans-serif;
+      @media screen and (max-width: 910px) {
+        margin-top: 25px;
+        text-align: start;
+      }
+      .container__span {
+        color: #fe390c;
+      }
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    .inputs {
+      display: flex;
+      flex-direction: row;
+      margin-top: 64px;
+      margin-bottom: 34px;
+      @media screen and (max-width: 527px) {
+        margin-top: 32px;
+        flex-direction: column;
+      }
+      .input__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-right: 30px;
+
+        .input {
+          border-radius: 2px;
+          background: rgba(202, 205, 209, 0.1);
+
+          flex-shrink: 0;
+          color: rgba(169, 169, 170, 0.6);
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: -0.24px;
+          border: 0;
+          outline: 0;
+          padding: 20px 20px 20px 16px;
+        }
+      }
+      .input__container:last-child {
+        margin-right: 0;
+      }
+    }
+    .darude {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.28px;
+      margin-bottom: 12px;
+    }
+    .input__message {
+      border-radius: 2px;
+      background: rgba(202, 205, 209, 0.1);
+
+      flex-shrink: 0;
+      color: rgba(169, 169, 170, 0.6);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.24px;
+      border: 0;
+      outline: 0;
+      padding: 19px 20px 93px 20px;
+      resize: none;
+    }
+  }
+  .button {
+    max-width: 152px;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    border-radius: 4px;
+    background: #fe390c;
+    margin-top: 48px;
+    border: 0;
+    outline: none;
+  }
+}
