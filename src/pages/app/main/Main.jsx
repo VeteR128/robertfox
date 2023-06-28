@@ -14,7 +14,6 @@ export const Main = () => {
       <About />
       <Places />
       <Work />
-
       <Service />
       <Portfolio />
       <Test />

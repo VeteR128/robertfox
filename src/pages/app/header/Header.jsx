@@ -1,49 +1,53 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Header.module.scss";
+import { AboutPage } from "../../AboutPage/AboutPage";
+import { ContactPage } from "../contactPage/ContactPage";
+import { ServisePage } from "../../servisePage/ServisePage";
+import { PortfolioPage } from "../portfolioPage/PortfolioPage";
+import { HeaderMainInfo } from "./headerMainInfo/HeaderMainInfo";
+import { Routes, Route, Link } from "react-router-dom";
+import { Layout } from "../../../components/Layout";
 
 export const Header = () => {
+  const img = useRef();
+  const popup = useRef();
+
+  const popupClose = (e) => {
+    if (img.current.className === e.target.className) {
+      popup.current.setAttribute("style", "visibility:visible;opacity:1");
+    } else {
+      popup.current.setAttribute("style", "visibility:hidden;opacity:0");
+    }
+  };
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} onClick={(e) => popupClose(e)}>
       <div className={styles.container}>
         <img className={styles.logo} src="logo.svg" alt="logo" />
-        <nav>
-          <a className={styles.link} href="#">
-            Home
-          </a>
-          <a className={styles.link} href="#">
-            about
-          </a>
-          <a className={styles.link} href="#">
-            service
-          </a>
-          <a className={styles.link} href="#">
-            portfolio
-          </a>
-        </nav>
-        <button className={styles.button}>contact</button>
-      </div>
-      <div className={styles.info}>
-        <div className={styles.name}>
-          <h1 className={styles.title}>
-            <span className={styles.span}>Hello</span>, I’m
-          </h1>
-          <p className={styles.subtitle}>robert fox</p>
-          <p className={styles.paragraph}>Professional Product Designer</p>
-          <button className={styles.info_button}>let’s talk</button>
-        </div>
-        <div className={styles.contact}>
-          <a className={styles.contact__link} href="">
-            <img className={styles.image} src="inst.svg" alt="instagramm" />
-          </a>
-          <a className={styles.contact__link} href="">
-            <img className={styles.image} src="face.svg" alt="facebook" />
-          </a>
-          <a className={styles.contact__link} href="">
-            <img className={styles.image} src="in.svg" alt="in" />
-          </a>
-          <a className={styles.contact__link} href="">
-            <img className={styles.image} src="ball.svg" alt="ball" />
-          </a>
+        <nav className={styles.nav}></nav>
+        <Link to="/contact" className={styles.button}>
+          contact
+        </Link>
+        <img className={styles.edit} src="Button.svg" alt="Button" ref={img} />
+        <div
+          className={styles.popup}
+          style={{ visibility: "hidden" }}
+          ref={popup}
+        >
+          <nav className={styles.popup__container}>
+            <a className={styles.link} href="#">
+              Home
+            </a>
+            <a className={styles.link} href="#">
+              about
+            </a>
+            <a className={styles.link} href="#">
+              service
+            </a>
+            <a className={styles.link} href="#">
+              portfolio
+            </a>
+          </nav>
         </div>
       </div>
     </header>

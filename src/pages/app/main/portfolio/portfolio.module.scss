@@ -33,6 +33,9 @@
         letter-spacing: 1.6px;
         text-transform: uppercase;
         margin-right: 24px;
+        @media screen and (max-width: 397px) {
+          margin-right: 8px;
+        }
       }
     }
     .button {
@@ -45,6 +48,9 @@
     }
     .button:first-child {
       margin-right: 34px;
+      @media screen and (max-width: 397px) {
+        margin-right: 8px;
+      }
     }
     .button:hover {
       transition: all 0.6s ease-in-out;

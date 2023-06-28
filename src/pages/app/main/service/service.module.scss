@@ -1,6 +1,9 @@
 .service {
   background: rgb(233, 213, 213);
-  padding-top: 215px;
+  padding-top: 155px;
+  @media screen and (max-width: 404px) {
+    padding-top: 200px;
+  }
 }
 
 .spaces {
@@ -25,6 +28,9 @@
       letter-spacing: 1.6px;
       text-transform: uppercase;
       margin-right: 24px;
+      @media screen and (max-width: 397px) {
+        margin-right: 8px;
+      }
     }
   }
   .cards {
@@ -48,6 +54,8 @@
     }
     .card:hover {
       background-color: #fe390c;
+      transition: all 0.7s ease-in-out;
+      cursor: pointer;
       .card__title {
         color: white;
       }
@@ -63,6 +71,7 @@
       margin-right: 0;
     }
     .card {
+      transition: all 0.7s ease-in-out;
       display: flex;
       flex-direction: column;
       background: #f7f7f7;
