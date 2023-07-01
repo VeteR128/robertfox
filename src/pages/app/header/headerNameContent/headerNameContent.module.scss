@@ -1,0 +1,47 @@
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: calc(60px + 70 * (100vw / 1440));
+  font-family: "Anton", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118%;
+  letter-spacing: 1.95px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: calc(133% / (1440 / 100));
+  margin-bottom: 18px;
+}
+.subtitle {
+  color: #a9a9aa;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 185%;
+  letter-spacing: -0.64px;
+  margin: 0;
+  padding-bottom: calc(149% / (1440 / 100));
+  .span {
+    color: #ffffff;
+  }
+}
+.container {
+  position: relative;
+  .bg {
+    position: absolute;
+    object-fit: cover;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-position: center center;
+    margin: 0 0;
+    color: rgba(255, 255, 255, 0.02);
+    font-size: calc(200px + 120 * (100vw / 1440));
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}

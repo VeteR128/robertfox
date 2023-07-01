@@ -4,7 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import styles from "./App.module.scss";
 import { ServisePage } from "../servisePage/ServisePage.jsx";
 import { PortfolioPage } from "./portfolioPage/PortfolioPage.jsx";
-import { ContactPage } from "./contactPage/ContactPage.jsx";
+import { ContactPage } from "../contactPage/ContactPage.jsx";
 import { Layout } from "../../components/Layout.jsx";
 import { HomePage } from "../homePage/HomePage.jsx";
 import { AboutPage } from "../AboutPage/AboutPage.jsx";
