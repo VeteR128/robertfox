@@ -1,0 +1,104 @@
+.skills {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-template-columns: minmax(200px, 42.54%) 1fr;
+  column-gap: calc(97% / (1140 / 100));
+  flex-direction: row;
+  padding-left: calc(150% / (1440 / 100));
+  padding-right: calc(150% / (1440 / 100));
+  padding-top: calc(80% / (1440 / 100));
+  padding-bottom: calc(80% / (1440 / 100));
+  background: #f7f7f7;
+  @media screen and (max-width: 893px) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    .info__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .count {
+        color: #fe390c;
+        font-size: calc(40px + 40 * (100vw / 1440));
+        font-family: "Anton", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        margin: 0;
+        margin-right: 24px;
+      }
+      .title {
+        margin: 0;
+        color: #111214;
+        font-size: calc(20px + 20 * (100vw / 1440));
+        font-family: "Anton", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+    }
+    .subtitle {
+      color: #a9a9aa;
+      font-size: 14px;
+      margin: 0;
+      margin-top: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: -0.28px;
+    }
+    .button {
+      max-width: 148px;
+      margin-top: 48px;
+      border-radius: 4px;
+      background: #fe390c;
+      color: #fff;
+      font-size: 12px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 16px 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 893px) {
+      margin-top: 25px;
+    }
+    .card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      border-bottom: 6px solid transparent;
+      margin-bottom: calc(32% / (558 / 100));
+      @media screen and (max-width: 893px) {
+        margin-bottom: calc(16% / (558 / 100));
+      }
+      .card__title {
+        color: #111214;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: -0.56px;
+      }
+    }
+    .card:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

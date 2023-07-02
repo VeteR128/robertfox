@@ -2,6 +2,7 @@
   background-image: url(bg.webp);
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
   .container {
     display: flex;
     flex-direction: row;
@@ -13,6 +14,7 @@
     align-items: center;
   }
   .nav {
+    z-index: 10;
     @media screen and (max-width: 558px) {
       display: none;
     }
