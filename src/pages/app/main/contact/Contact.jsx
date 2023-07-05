@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./contact.module.scss";
 
-export const Contact = () => {
+export const Contact = (props) => {
   const cards = [
     { img: "Call.svg", title: "Phone", subtitle: "(219) 555-0114" },
     { img: "Message.svg", title: "Email", subtitle: "robertfox@example.com" },
@@ -18,17 +18,26 @@ export const Contact = () => {
     { img: "face.svg" },
   ];
   return (
-    <section className={styles.contact}>
+    <section
+      className={styles.contact}
+      style={{ background: `${props.color}` }}
+    >
       <div className={styles.info}>
-        <h3 className={styles.info__title}>
-          <span className={styles.span}>05</span>contact
+        <h3 className={styles.info__title} style={{ color: `${props.text}` }}>
+          <span className={styles.span}>05</span>
+          contact
         </h3>
         <ul className={styles.list}>
           {cards.map((item) => (
             <li className={styles.card} key={cards.indexOf(item)}>
               <img className={styles.img} src={item.img} alt={item.img} />
               <div>
-                <h4 className={styles.card__title}>{item.title}</h4>
+                <h4
+                  className={styles.card__title}
+                  style={{ color: `${props.text}` }}
+                >
+                  {item.title}
+                </h4>
                 <p className={styles.card__subtitle}>{item.subtitle}</p>
               </div>
             </li>
@@ -36,14 +45,22 @@ export const Contact = () => {
         </ul>
         <nav className={styles.navigation}>
           {links.map((item) => (
-            <a className={styles.link} href="#" key={links.indexOf(item)}>
+            <a
+              className={styles.link}
+              href="#"
+              key={links.indexOf(item)}
+              style={{ background: `${props.text}` }}
+            >
               <img className={styles.link_img} src={item.img} alt={item.img} />
             </a>
           ))}
         </nav>
       </div>
       <div className={styles.container}>
-        <h3 className={styles.container__title}>
+        <h3
+          className={styles.container__title}
+          style={{ color: `${props.text}` }}
+        >
           I’m always open to discussing
           <span className={styles.container__span}> product design work </span>
           or partnership
@@ -51,7 +68,11 @@ export const Contact = () => {
         <form className={styles.form}>
           <div className={styles.inputs}>
             <div className={styles.input__container}>
-              <label className={styles.darude} htmlFor="name">
+              <label
+                className={styles.darude}
+                style={{ color: `${props.text}` }}
+                htmlFor="name"
+              >
                 Your name*
               </label>
               <input
@@ -62,7 +83,11 @@ export const Contact = () => {
               />
             </div>
             <div className={styles.input__container}>
-              <label className={styles.darude} htmlFor="Email">
+              <label
+                className={styles.darude}
+                style={{ color: `${props.text}` }}
+                htmlFor="Email"
+              >
                 Email Address*
               </label>
               <input
@@ -73,7 +98,11 @@ export const Contact = () => {
               />
             </div>
           </div>
-          <label className={styles.darude} htmlFor="message">
+          <label
+            className={styles.darude}
+            style={{ color: `${props.text}` }}
+            htmlFor="message"
+          >
             Message
           </label>
           <textarea

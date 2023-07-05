@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import { AboutPage } from "../../AboutPage/AboutPage";
 import { ContactPage } from "../../contactPage/ContactPage";
 import { ServisePage } from "../../servisePage/ServisePage";
-import { PortfolioPage } from "../portfolioPage/PortfolioPage";
+import { PortfolioPage } from "../../portfolioPage/PortfolioPage";
 import { HeaderMainInfo } from "./headerMainInfo/HeaderMainInfo";
 import { Routes, Route, Link } from "react-router-dom";
 import { Layout } from "../../../components/Layout";

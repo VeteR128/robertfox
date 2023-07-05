@@ -13,11 +13,11 @@ export const Main = () => {
     <main>
       <About />
       <Places />
-      <Work />
+      <Work color={"rgb(233, 213, 213)"} />
       <Service />
       <Portfolio />
       <Test />
-      <Contact />
+      <Contact color={"#111214"} />
     </main>
   );
 };

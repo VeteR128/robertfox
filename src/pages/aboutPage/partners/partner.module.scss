@@ -1,5 +1,6 @@
 .partners {
   background: #f7f7f7;
+  padding-bottom: calc(200% / (1440 / 100));
   .info {
     display: flex;
     flex-direction: row;
@@ -75,6 +76,6 @@
 
   .work__container {
     padding-top: calc(200% / (1440 / 100));
-    padding-bottom: 200px;
+    padding-bottom: calc(100% / (1440 / 100));
   }
 }

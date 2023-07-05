@@ -4,14 +4,21 @@ import { Skills } from "./skills/Skills";
 import { Exp } from "./exp/Exp";
 import { Partners } from "./partners/Partners";
 import { Work } from "../app/main/work/Work";
+import styles from "./ab.module.scss";
 
-export const AboutPage = () => {
+export const AboutPage = (props) => {
   return (
     <main>
       <About />
       <Skills />
       <Exp />
       <Partners />
+      <div
+        className={styles.container}
+        style={{ background: `${props.color}` }}
+      >
+        <Work color={"#f7f7f7"} />
+      </div>
     </main>
   );
 };

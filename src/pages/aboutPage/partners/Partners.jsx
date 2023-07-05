@@ -43,10 +43,6 @@ export const Partners = () => {
           />
         ))}
       </div>
-
-      <div className={styles.work__container}>
-        <Work />
-      </div>
     </section>
   );
 };
