@@ -1,9 +1,15 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./about.module.scss";
-export const About = () => {
+export const About = (props) => {
+  let card = useRef();
+  let info = useRef();
+  let arr = [card, info];
+  useEffect(() => {
+    props.anim(arr);
+  });
   return (
     <section className={styles.about}>
-      <div className={styles.cards}>
+      <div className={styles.cards} ref={card}>
         <div className={styles.card}>
           <img className={styles.img} src="aboutOne.webp" alt="one" />
           <div className={styles.card__container}>
@@ -19,7 +25,7 @@ export const About = () => {
           <img className={styles.img} src="aboutTwo.webp" alt="two" />
         </div>
       </div>
-      <div className={styles.info}>
+      <div className={styles.info} ref={info}>
         <div className={styles.info__container}>
           <p className={styles.count}>01</p>
           <h2 className={styles.info__title}>about me</h2>

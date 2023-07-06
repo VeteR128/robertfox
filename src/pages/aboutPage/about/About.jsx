@@ -1,11 +1,22 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./about.module.scss";
 
-export const About = () => {
+export const About = (props) => {
+  let con = useRef();
+  let contwo = useRef();
+  let arr = [con, contwo];
+  useEffect(() => {
+    props.anim(arr);
+  });
   return (
     <section className={styles.about}>
-      <img className={styles.img} src="AboutImg.webp" alt="aboutImg" />
-      <div className={styles.container}>
+      <img
+        className={styles.img}
+        src="AboutImg.webp"
+        alt="aboutImg"
+        ref={con}
+      />
+      <div className={styles.container} ref={contwo}>
         <div className={styles.count__container}>
           <h2 className={styles.count}>01</h2>
           <p className={styles.count__title}>about me</p>

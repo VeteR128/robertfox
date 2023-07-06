@@ -1,7 +1,13 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./skills.module.scss";
 
-export const Skills = () => {
+export const Skills = (props) => {
+  let con = useRef();
+  let contwo = useRef();
+  let arr = [con, contwo];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const list = [
     { name: "UI/UX Design", count: "90%", width: "502" },
     { name: "Front End Developer", count: "95%", width: "527" },
@@ -10,7 +16,7 @@ export const Skills = () => {
   ];
   return (
     <section className={styles.skills}>
-      <div className={styles.info}>
+      <div className={styles.info} ref={con}>
         <div className={styles.info__container}>
           <h3 className={styles.count}>02</h3>
           <p className={styles.title}>My Skills</p>
@@ -22,7 +28,7 @@ export const Skills = () => {
         </p>
         <button className={styles.button}>DOWNLOAD CV</button>
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} ref={contwo}>
         {list.map((item) => (
           <div
             className={styles.card}

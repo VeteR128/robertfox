@@ -1,10 +1,15 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./work.module.scss";
 
 export const Work = (props) => {
+  let con = useRef();
+  let arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   return (
     <div className={styles.container} style={{ background: `${props.color}` }}>
-      <div className={styles.work}>
+      <div className={styles.work} ref={con}>
         <h3 className={styles.title}>
           let’s work together on Your Next Project
         </h3>

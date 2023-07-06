@@ -45,6 +45,9 @@
         line-height: normal;
         letter-spacing: 0.8px;
         text-transform: uppercase;
+        @media screen and (max-width: 560px) {
+          margin-left: 12px;
+        }
       }
     }
   }
@@ -55,6 +58,9 @@
     margin-bottom: 24px;
     @media screen and (max-width: 480px) {
       padding: 12px;
+    }
+    .quest__btn {
+      cursor: pointer;
     }
     .quest__container {
       display: flex;
@@ -90,5 +96,5 @@
   }
 }
 .quest:last-child {
-  margin-bottom: 0;
+  margin-bottom: 44px;
 }

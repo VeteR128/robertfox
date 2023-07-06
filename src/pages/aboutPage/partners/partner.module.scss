@@ -1,6 +1,6 @@
 .partners {
   background: #f7f7f7;
-  padding-bottom: calc(200% / (1440 / 100));
+  padding-bottom: 150px;
   .info {
     display: flex;
     flex-direction: row;
@@ -20,6 +20,9 @@
       text-transform: uppercase;
       margin: 0;
       margin-right: 24px;
+      @media screen and (max-width: 560px) {
+        margin-right: 12px;
+      }
     }
     .title {
       margin: 0;

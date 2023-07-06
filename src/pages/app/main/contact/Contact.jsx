@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./contact.module.scss";
 
 export const Contact = (props) => {
+  let con = useRef();
+  let contwo = useRef();
+  let arr = [con, contwo];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const cards = [
     { img: "Call.svg", title: "Phone", subtitle: "(219) 555-0114" },
     { img: "Message.svg", title: "Email", subtitle: "robertfox@example.com" },
@@ -22,9 +28,9 @@ export const Contact = (props) => {
       className={styles.contact}
       style={{ background: `${props.color}` }}
     >
-      <div className={styles.info}>
+      <div className={styles.info} ref={con}>
         <h3 className={styles.info__title} style={{ color: `${props.text}` }}>
-          <span className={styles.span}>05</span>
+          <span className={styles.span}>{props.number}</span>
           contact
         </h3>
         <ul className={styles.list}>
@@ -56,7 +62,7 @@ export const Contact = (props) => {
           ))}
         </nav>
       </div>
-      <div className={styles.container}>
+      <div className={styles.container} ref={contwo}>
         <h3
           className={styles.container__title}
           style={{ color: `${props.text}` }}

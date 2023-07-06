@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./faq.module.scss";
 
-export const Faq = () => {
+export const Faq = (props) => {
+  let con = useRef();
+
+  let arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const tab = (id, e) => {
     let item = document.getElementById(id);
     let itemBg = document.getElementById(id + 100);
@@ -24,9 +30,9 @@ export const Faq = () => {
   ];
   return (
     <section className={styles.faq}>
-      <div className={styles.container}>
+      <div className={styles.container} ref={con}>
         <h2 className={styles.title}>
-          04
+          {props.number}
           <span className={styles.span}>HAVE ANY QUESTIONS?</span>
         </h2>
         {list.map((item) => (

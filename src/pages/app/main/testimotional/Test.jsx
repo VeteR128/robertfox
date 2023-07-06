@@ -1,10 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./test.module.scss";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
-export const Test = () => {
+export const Test = (props) => {
+  let con = useRef();
+  let arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const list = [{ id: 1 }, { id: 2 }, { id: 2 }];
   const slideRef = useRef();
   const [cou, setCou] = useState("01");
@@ -21,12 +26,12 @@ export const Test = () => {
     }
   };
   return (
-    <section className={styles.test}>
+    <section className={styles.test} ref={con}>
       <img className={styles.img} src="test.webp" alt="test" />
       <div className={styles.container}>
         <div className={styles.text__container}>
           <h2 className={styles.text}>
-            <span className={styles.span}>04</span>testimonial
+            <span className={styles.span}>{props.number}</span>testimonial
           </h2>
           <div className={styles.count__container}>
             <p className={styles.count_active}>{cou}</p>

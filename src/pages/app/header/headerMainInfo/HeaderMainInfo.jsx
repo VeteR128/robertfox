@@ -1,11 +1,16 @@
-import React from "react";
+import { React, useEffect, useRef } from "react";
 import { HeaderNameContent } from "../headerNameContent/HeaderNameContent";
 import styles from "./headerMain.module.scss";
 
 export const HeaderMainInfo = (props) => {
+  const con = useRef(null);
+  const arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   if (props.path === "/") {
     return (
-      <div className={styles.info}>
+      <div className={styles.info} ref={con}>
         <div className={styles.name}>
           <h1 className={styles.title}>
             <span className={styles.span}>Hello</span>, I’m
@@ -31,12 +36,12 @@ export const HeaderMainInfo = (props) => {
       </div>
     );
   } else if (props.path === "/about") {
-    return <HeaderNameContent name="about" />;
+    return <HeaderNameContent anim={props.anim} name="about" />;
   } else if (props.path === "/servise") {
-    return <HeaderNameContent name="servise" />;
+    return <HeaderNameContent anim={props.anim} name="servise" />;
   } else if (props.path === "/portfolio") {
-    return <HeaderNameContent name="portfolio" />;
+    return <HeaderNameContent anim={props.anim} name="portfolio" />;
   } else {
-    return <HeaderNameContent name="contact" />;
+    return <HeaderNameContent anim={props.anim} name="contact" />;
   }
 };

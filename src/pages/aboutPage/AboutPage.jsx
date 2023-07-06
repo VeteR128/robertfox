@@ -9,15 +9,15 @@ import styles from "./ab.module.scss";
 export const AboutPage = (props) => {
   return (
     <main>
-      <About />
-      <Skills />
-      <Exp />
-      <Partners />
+      <About anim={props.anim} />
+      <Skills anim={props.anim} />
+      <Exp anim={props.anim} />
+      <Partners anim={props.anim} number={"04"} />
       <div
         className={styles.container}
         style={{ background: `${props.color}` }}
       >
-        <Work color={"#f7f7f7"} />
+        <Work anim={props.anim} color={"#f7f7f7"} />
       </div>
     </main>
   );

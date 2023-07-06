@@ -1,10 +1,15 @@
-import React, { useRef } from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./portfolio.module.scss";
 import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
-export const Portfolio = () => {
+export const Portfolio = (props) => {
+  let con = useRef();
+  let arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const slideRef = useRef();
   const list = [
     { src: "portfolioOne.webp", alt: "portfolioOne" },
@@ -14,10 +19,10 @@ export const Portfolio = () => {
     { src: "portfolioOne.webp", alt: "portfolioOne" },
   ];
   return (
-    <section className={styles.portfolio}>
+    <section className={styles.portfolio} ref={con}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          <span className={styles.span}>03</span> portfolio
+          <span className={styles.span}>{props.number}</span> portfolio
         </h2>
         <div>
           <button

@@ -1,7 +1,13 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./exp.module.scss";
 
-export const Exp = () => {
+export const Exp = (props) => {
+  let con = useRef();
+  let contwo = useRef();
+  let arr = [con, contwo];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const list = [
     { img: "linkedin.svg", count: "01" },
     { img: "yahoo.svg", count: "02" },
@@ -10,11 +16,11 @@ export const Exp = () => {
   ];
   return (
     <section className={styles.exp}>
-      <div className={styles.text}>
+      <div className={styles.text} ref={con}>
         <h3 className={styles.count}>03</h3>
         <p className={styles.title}>My Experiences</p>
       </div>
-      <div className={styles.cards}>
+      <div className={styles.cards} ref={contwo}>
         {list.map((item) => (
           <div className={styles.card} key={list.indexOf(item)}>
             <img className={styles.card__img} src={item.img} alt={item.img} />

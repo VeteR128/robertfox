@@ -14,6 +14,12 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
   }
+  @media screen and (max-width: 560px) {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .info {
     display: flex;
     flex-direction: column;
@@ -32,6 +38,9 @@
         text-transform: uppercase;
         margin: 0;
         margin-right: 24px;
+        @media screen and (max-width: 560px) {
+          margin-right: 12px;
+        }
       }
       .title {
         margin: 0;
@@ -54,6 +63,9 @@
       font-weight: 500;
       line-height: 32px;
       letter-spacing: -0.28px;
+      @media screen and (max-width: 560px) {
+        margin-right: 32px;
+      }
     }
     .button {
       max-width: 148px;

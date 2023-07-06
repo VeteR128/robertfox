@@ -7,6 +7,12 @@
   padding-bottom: calc(120% / (1440 / 100));
   align-items: center;
   background: rgb(233, 213, 213);
+  @media screen and (max-width: 560px) {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .text {
     display: flex;
     flex-direction: row;
@@ -23,6 +29,9 @@
       letter-spacing: 1.6px;
       text-transform: uppercase;
       margin-right: 24px;
+      @media screen and (max-width: 560px) {
+        margin-right: 12px;
+      }
     }
     .title {
       margin: 0;
@@ -40,6 +49,9 @@
     display: flex;
     flex-direction: row;
     margin-top: calc(48% / (1140 / 100));
+    @media screen and (max-width: 560px) {
+      margin-top: 24px;
+    }
     @media screen and (max-width: 768px) {
       flex-direction: column;
     }
@@ -106,6 +118,9 @@
     margin-right: calc(78% / (1140 / 100));
     @media screen and (max-width: 768px) {
       margin-top: 30px;
+    }
+    @media screen and (max-width: 560px) {
+      margin-top: 24px;
     }
   }
   .card:last-child {

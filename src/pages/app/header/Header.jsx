@@ -5,15 +5,25 @@ import { ContactPage } from "../../contactPage/ContactPage";
 import { ServisePage } from "../../servisePage/ServisePage";
 import { PortfolioPage } from "../../portfolioPage/PortfolioPage";
 import { HeaderMainInfo } from "./headerMainInfo/HeaderMainInfo";
-import { Routes, Route, Link } from "react-router-dom";
-import { Layout } from "../../../components/Layout";
 
-export const Header = () => {
+import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Layout } from "../../../components/Layout";
+import { gsap, ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
+
+export const Header = (props) => {
   const bg = useRef();
   const img = useRef();
   const popup = useRef();
+  const logo = useRef();
+  const nav = useRef();
+  const arr = [logo];
+  console.log(props.anim);
+  useEffect(() => {
+    props.anim(arr);
+  }, []);
 
-  const [url, setUrl] = useState("/");
+  const [url, setUrl] = useState(`${window.location.pathname}`);
   const setbg = (image) => {
     bg.current.setAttribute("style", `background-image:url(${image})`);
   };
@@ -31,58 +41,91 @@ export const Header = () => {
     });
   };
 
-  const popupClose = (e) => {
-    if (img.current.className === e.target.className) {
-      popup.current.setAttribute("style", "visibility:visible;opacity:1");
-    } else {
-      popup.current.setAttribute("style", "visibility:hidden;opacity:0");
-    }
-  };
+  const [modalBtn, setModalBtn] = useState(true);
 
   return (
-    <header className={styles.header} onClick={(e) => popupClose(e)} ref={bg}>
+    <header className={styles.header} ref={bg}>
       <div className={styles.container}>
-        <img className={styles.logo} src="logo.svg" alt="logo" />
-        <nav className={styles.nav}>
-          <Link className={styles.link} to="/" onClick={da}>
+        <img className={styles.logo} src="logo.svg" alt="logo" ref={logo} />
+        <nav className={styles.nav} ref={nav}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link__active : styles.link
+            }
+            to="/"
+            onClick={da}
+          >
             Home
-          </Link>
-          <Link className={styles.link} to="/about" onClick={da}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link__active : styles.link
+            }
+            to="/about"
+            onClick={da}
+          >
             about
-          </Link>
-          <Link className={styles.link} to="/servise" onClick={da}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link__active : styles.link
+            }
+            to="/servise"
+            onClick={da}
+          >
             service
-          </Link>
-          <Link className={styles.link} to="/portfolio" onClick={da}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.link__active : styles.link
+            }
+            to="/portfolio"
+            onClick={da}
+          >
             portfolio
-          </Link>
+          </NavLink>
         </nav>
-        <Link to="/contact" className={styles.button} onClick={da}>
+        <NavLink to="/contact" className={styles.button} onClick={da}>
           contact
-        </Link>
-        <img className={styles.edit} src="Button.svg" alt="Button" ref={img} />
+        </NavLink>
+        <img
+          className={styles.edit}
+          onClick={() => {
+            setModalBtn(false);
+            console.log(modalBtn);
+          }}
+          src="Button.svg"
+          alt="Button"
+          ref={img}
+        />
         <div
-          className={styles.popup}
-          style={{ visibility: "hidden" }}
+          className={modalBtn ? styles.popup : styles.popup__active}
           ref={popup}
+          onClick={() => {
+            setModalBtn(true);
+            console.log(modalBtn);
+          }}
         >
           <nav className={styles.popup__container}>
-            <a className={styles.link} href="#">
+            <Link className={styles.link} to="/" onClick={da}>
               Home
-            </a>
-            <a className={styles.link} href="#">
+            </Link>
+            <Link className={styles.link} to="/about" onClick={da}>
               about
-            </a>
-            <a className={styles.link} href="#">
+            </Link>
+            <Link className={styles.link} to="/servise" onClick={da}>
               service
-            </a>
-            <a className={styles.link} href="#">
+            </Link>
+            <Link className={styles.link} to="/portfolio" onClick={da}>
               portfolio
-            </a>
+            </Link>
+            <Link to="/contact" className={styles.link} onClick={da}>
+              contact
+            </Link>
           </nav>
         </div>
       </div>
-      {<HeaderMainInfo path={url} />}
+      {<HeaderMainInfo anim={props.anim} path={url} />}
     </header>
   );
 };

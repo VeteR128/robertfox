@@ -1,11 +1,17 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
+
 import styles from "./service.module.scss";
-export const Service = () => {
+export const Service = (props) => {
+  let con = useRef();
+  let arr = [con];
+  useEffect(() => {
+    props.anim(arr);
+  });
   return (
     <section className={styles.service}>
-      <div className={styles.spaces}>
+      <div className={styles.spaces} ref={con}>
         <h2 className={styles.spaces__title}>
-          <span className={styles.span}>02</span>my service
+          <span className={styles.span}>{props.number}</span>my service
         </h2>
         <div className={styles.cards}>
           <div className={styles.card}>

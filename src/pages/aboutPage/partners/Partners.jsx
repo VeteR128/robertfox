@@ -1,8 +1,15 @@
-import React from "react";
+import { React, useRef, useEffect } from "react";
 import styles from "./partner.module.scss";
 import { Work } from "../../app/main/work/Work";
 
-export const Partners = () => {
+export const Partners = (props) => {
+  let con = useRef();
+  let contwo = useRef();
+  let contwoo = useRef();
+  let arr = [con, contwo, contwoo];
+  useEffect(() => {
+    props.anim(arr);
+  });
   const list = [
     { img: "behance.svg" },
     { img: "slack.svg" },
@@ -18,12 +25,12 @@ export const Partners = () => {
   ];
   return (
     <section className={styles.partners}>
-      <div className={styles.info}>
-        <h3 className={styles.count}>04</h3>
+      <div className={styles.info} ref={con}>
+        <h3 className={styles.count}>{props.number}</h3>
         <p className={styles.title}>my pARTNERS</p>
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.container} ref={contwo}>
         {list.map((item) => (
           <img
             key={list.indexOf(item)}
@@ -33,7 +40,7 @@ export const Partners = () => {
           />
         ))}
       </div>
-      <div className={styles.containertwo}>
+      <div className={styles.containertwo} ref={contwoo}>
         {listTwo.map((item) => (
           <img
             key={listTwo.indexOf(item)}
