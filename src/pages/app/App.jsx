@@ -37,22 +37,22 @@ function App() {
     <>
       <div className={styles.page}>
         <Routes>
-          <Route path="/" element={<Layout anim={anim} />}>
+          <Route path="/robertfox/" element={<Layout anim={anim} />}>
             <Route index element={<HomePage anim={anim} />}></Route>
             <Route
-              path="/about"
+              path="/robertfox/about"
               element={<AboutPage anim={anim} color={"#f7f7f7"} />}
             ></Route>
             <Route
-              path="/servise"
+              path="/robertfox/servise"
               element={<ServisePage anim={anim} />}
             ></Route>
             <Route
-              path="/portfolio"
+              path="/robertfox/portfolio"
               element={<PortfolioPage anim={anim} />}
             ></Route>
             <Route
-              path="/contact"
+              path="/robertfox/contact"
               element={<ContactPage anim={anim} />}
             ></Route>
           </Route>

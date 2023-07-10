@@ -28,9 +28,9 @@ export const Header = (props) => {
     bg.current.setAttribute("style", `background-image:url(${image})`);
   };
   useEffect(() => {
-    if (url !== "/") {
+    if (url !== "/robertfox/") {
       setbg("bgTwo.webp");
-    } else if (url === "/") {
+    } else if (url === "/robertfox/") {
       setbg("bg.webp");
     }
   }, [url]);
@@ -52,7 +52,7 @@ export const Header = (props) => {
             className={({ isActive }) =>
               isActive ? styles.link__active : styles.link
             }
-            to="/"
+            to="/robertfox/"
             onClick={da}
           >
             Home
@@ -61,7 +61,7 @@ export const Header = (props) => {
             className={({ isActive }) =>
               isActive ? styles.link__active : styles.link
             }
-            to="/about"
+            to="/robertfox/about"
             onClick={da}
           >
             about
@@ -70,7 +70,7 @@ export const Header = (props) => {
             className={({ isActive }) =>
               isActive ? styles.link__active : styles.link
             }
-            to="/servise"
+            to="/robertfox/servise"
             onClick={da}
           >
             service
@@ -79,13 +79,13 @@ export const Header = (props) => {
             className={({ isActive }) =>
               isActive ? styles.link__active : styles.link
             }
-            to="/portfolio"
+            to="/robertfox/portfolio"
             onClick={da}
           >
             portfolio
           </NavLink>
         </nav>
-        <NavLink to="/contact" className={styles.button} onClick={da}>
+        <NavLink to="/robertfox/contact" className={styles.button} onClick={da}>
           contact
         </NavLink>
         <img
@@ -107,19 +107,23 @@ export const Header = (props) => {
           }}
         >
           <nav className={styles.popup__container}>
-            <Link className={styles.link} to="/" onClick={da}>
+            <Link className={styles.link} to="/robertfox/" onClick={da}>
               Home
             </Link>
-            <Link className={styles.link} to="/about" onClick={da}>
+            <Link className={styles.link} to="/robertfox/about" onClick={da}>
               about
             </Link>
-            <Link className={styles.link} to="/servise" onClick={da}>
+            <Link className={styles.link} to="/robertfox/servise" onClick={da}>
               service
             </Link>
-            <Link className={styles.link} to="/portfolio" onClick={da}>
+            <Link
+              className={styles.link}
+              to="/robertfox/portfolio"
+              onClick={da}
+            >
               portfolio
             </Link>
-            <Link to="/contact" className={styles.link} onClick={da}>
+            <Link to="/robertfox/contact" className={styles.link} onClick={da}>
               contact
             </Link>
           </nav>

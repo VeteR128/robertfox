@@ -8,7 +8,7 @@ export const HeaderMainInfo = (props) => {
   useEffect(() => {
     props.anim(arr);
   });
-  if (props.path === "/") {
+  if (props.path === "/robertfox/") {
     return (
       <div className={styles.info} ref={con}>
         <div className={styles.name}>
@@ -35,11 +35,11 @@ export const HeaderMainInfo = (props) => {
         </div>
       </div>
     );
-  } else if (props.path === "/about") {
+  } else if (props.path === "/robertfox/about") {
     return <HeaderNameContent anim={props.anim} name="about" />;
-  } else if (props.path === "/servise") {
+  } else if (props.path === "/robertfox/servise") {
     return <HeaderNameContent anim={props.anim} name="servise" />;
-  } else if (props.path === "/portfolio") {
+  } else if (props.path === "/robertfox/portfolio") {
     return <HeaderNameContent anim={props.anim} name="portfolio" />;
   } else {
     return <HeaderNameContent anim={props.anim} name="contact" />;
