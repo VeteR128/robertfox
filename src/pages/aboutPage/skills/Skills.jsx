@@ -9,10 +9,10 @@ export const Skills = (props) => {
     props.anim(arr);
   });
   const list = [
-    { name: "UI/UX Design", count: "90%", width: "502" },
-    { name: "Front End Developer", count: "95%", width: "527" },
-    { name: "Graphic Design", count: "90%", width: "502" },
-    { name: "Product Design", count: "85%", width: "481" },
+    { name: "UI/UX Design", count: "90%" },
+    { name: "Front End Developer", count: "95%" },
+    { name: "Graphic Design", count: "90%" },
+    { name: "Product Design", count: "85%" },
   ];
   return (
     <section className={styles.skills}>
